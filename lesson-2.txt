@@ -1,0 +1,44 @@
+1. Giải thích các câu lệnh: git init, git add <file_name>, git add ., git commit -m “message”. 
+
+- git init: khởi tạo thư mục được quản lý bởi Git và chỉ khởi tạo 1 lần duy nhất
+
+- git add <file_name>: thêm file vào vùng staging.
+
+- git add . : Thêm toàn file vào vùng staging.
+
+- git commit -m “message”: file từ vùng staging chuyển sang vùng repository với một đoạn thông điệp đã được cung cấp
+
+2. 
+
+a Tạo 3 file: file1, file2, file3 
+- Vùng working directory: (trống)
+- Vùng staging: (trống)
+- Vùng repository: (trống)
+
+b. Chạy lệnh: git init
+- Vùng working directory: file1, file2, file3
+- Vùng staging: (trống)
+- Vùng repository: (trống)
+
+c. Chạy lệnh: git commit -m”init project”
+- Vùng working directory: file1, file2, file3
+- Vùng staging: (trống)
+- Vùng repository: (trống)
+
+d. Chạy lệnh: git add file1
+- Vùng working directory:  file2, file3
+- Vùng staging: file1
+- Vùng repository: (trống)
+
+e. Chạy lệnh: git commit -m”add file1” 
+- Vùng working directory:  file2, file3
+- Vùng staging: (trống)
+- Vùng repository:  file1
+
+f. Chạy lệnh: git add file 
+- Vùng working directory:  file2, file3
+- Vùng staging: (trống)
+- Vùng repository:  file1
+
+
+
