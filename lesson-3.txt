@@ -1,0 +1,114 @@
+Câu 1: 
+
+-git commit --amend: Thay đổi commit message và được sửa trong trình soạn thảo VIM
+
+-git commit --amend-m”<message>”: cũng là thay đổi commit message nhưng được phép thay đổi trực tiếp mà không cần phải mở trình soạn thảo VIM
+
+-git restore --staged <file>: chuyển file từ vùng staging về lại vùng work directory
+
+-git reset HEAD~1: chuyển 1 commit từ vùng repository về lại vùng work directory và commit message đó sẽ bị xóa theo.
+
+Câu 2: 
+
+a. Tạo 3 file: file1, file2, file3
+
+- Vùng work directory:(trống)
+- Vùng Staging: (trống)
+- Vùng repository: (trống)
+
+b. Chạy lệnh: git init => Khởi tạo vùng trạng thái
+
+- Vùng work directory: file1, file2, file3
+- Vùng Staging: (trống)
+- Vùng repository: (trống)
+
+
+c. Chạy lệnh: git commit -m”init project” => không thay đổi vì chưa đưa bất kỳ file nào vào vùng Repository và không có message
+
+- Vùng work directory: file1, file2, file3
+- Vùng Staging: (trống)
+- Vùng repository: (trống)
+
+d. Chạy lệnh: git add file1 => thêm file1 vào vùng Staging
+
+- Vùng work directory:  file2, file3
+- Vùng Staging: file1
+- Vùng repository: (trống)
+
+e. Chạy lệnh: git commit -m”add file” => đưa file 1 lên vùng repository với thông điệp là "add file"
+
+- Vùng work directory:  file2, file3
+- Vùng Staging: (trống)
+- Vùng repository: file1
+- Commit 1: file1
+	- Nội dung commit: "add file"
+
+
+f. Chạy lệnh: git add . => Đưa tất cả các file vào vùng Staging
+
+- Vùng work directory: (trống) 
+- Vùng Staging: file2, file3
+- Vùng repository: file1
+
+g. Chạy lệnh: git restore --staged file2 => Đưa file2 trở về lại vùng Work Directory
+
+- Vùng work directory: file2
+- Vùng Staging:  file3
+- Vùng repository: file1
+
+
+h. Chạy lệnh: git commit -m”add all files” => Đưa file3 vào vùng repository với thông điệp là "add all files".
+
+- Vùng work directory: file2
+- Vùng Staging:  (trống)
+- Vùng repository: file1 file3
+- Commit 2: file3
+	- Nội dung commit: "add all files"
+
+i. Chạy lệnh: git reset HEAD~1 => uncommit 1 file từ vùng repository về lại vùng work directory
+
+- Vùng work directory: file2, file3
+- Vùng Staging:  (trống)
+- Vùng repository: file1 
+- Chỉ còn lại Commit 1: file1
+	- Nội dung commit: "add file"
+
+
+Câu 3: 
+
+a. Chạy lệnh git init
+
+- Vùng work directory: (trống)
+- Vùng Staging: (trống)
+- Vùng repository: (trống)
+
+
+b. Tạo file file1.txt, file2.txt, oops/file3.txt.
+
+- Vùng work directory: file1.txt, file2.txt, oops/file3.txt.
+- Vùng Staging: (trống)
+- Vùng repository: (trống)
+
+
+c. Thêm file .gitignore, thêm vào 2 dòng:
+	i. file1.txt
+	ii. oops/
+
+- Vùng work directory:  file2.txt, .gitignore, file1.txt, oops/file3.txt.
+- Vùng Staging: (trống)
+- Vùng repository: (trống)
+
+
+d. Chạy lệnh: git add .
+
+- Vùng work directory: file1.txt, oops/file3.txt
+- Vùng Staging: file2.txt, .gitignore
+- Vùng repository: (trống)
+
+e. Chạy lệnh: git commit -m"init project"
+
+- Vùng work directory: file1.txt, oops/file3.txt
+- Vùng Staging: (trống) 
+- Vùng repository: file2.txt, .gitignore
+
+	
