@@ -55,3 +55,26 @@ Trong đó:
     
         Độ dài mảng: length
         Lấy phần tử theo index: [0], [1], [2]
+
+## Function (Hàm)
+- Là đoạn code được đặt tên và có thể tái sử dụng nhiều lần.
+
+- Khai Báo: 
+    
+        function <nameFunction>() {
+            // code
+        }
+
+## == và !=
+== và != : 
+- So sánh kiểu “lỏng lẻo”
+- Convert giá trị về kiểu
+“lớn hơn”
+
+===: so sánh tuyệt đối
+
+## Vòng lặp nâng cao: break and continue
+
+Break : dùng để kết thúc sớm trong quá trình thực thi của 1 vòng lặp
+
+Continue: khi được thực hiện thì nó sẽ bỏ qua câu lệnh bên dưới nó trong vòng lặp và quay trở lại vòng lặp mới
